@@ -7,16 +7,16 @@
 4. install grpc_tools in global --npm install -g grpc-tools
 ```
 
-## Download latest [PROTC Compiler] (https://github.com/protocolbuffers/protobuf/releases) for windows 
+## Download latest [PROTC Compiler](https://github.com/protocolbuffers/protobuf/releases) for windows 
 ```
 Install it in the folder 
 C:/Apps/protoc-3.15.6-win64/bin/protoc 
 ```
-__Execute the below command to generate the static grpc files__
+### Execute the below command to generate the static grpc files ### 
 Verified working Command - 16/04/2021
-__Execute below command generate schema file named retirementaccount_grpc_pb__
+### Execute below command generate schema file named retirementaccount_grpc_pb ### 
 C:/Apps/protoc-3.15.6-win64/bin/protoc --js_out=import_style=commonjs,binary:src/static/build/ proto/retirementaccount.proto
-__Execute below command generate service object retirementaccount_pb reference the schema file generated in previous step__
+### Execute below command generate service object retirementaccount_pb reference the schema file generated in previous step ### 
 grpc_tools_node_protoc --js_out=import_style=commonjs,binary:src/static/build/proto --grpc_out=grpc_js:src/static/build/proto  --proto_path=./proto ./proto/*.proto
 ## Static code
 ### Run the below commands in a terminal [Execute the static server]
