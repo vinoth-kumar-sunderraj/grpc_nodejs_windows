@@ -7,10 +7,13 @@
 4. install grpc_tools in global --npm install -g grpc-tools
 ```
 
-##Download PROTC Compiler for windows from
+## Download PROTC Compiler for windows from
 https://github.com/protocolbuffers/protobuf/releases
-Install it in the folder C:/Apps/protoc-3.15.6-win64/bin/protoc 
 
+## Install it in the folder 
+```
+C:/Apps/protoc-3.15.6-win64/bin/protoc 
+```
 [Execute the below command to generate the static grpc files]
 Verified working Command - 16/04/2021
 [Execute below command generate schema file named retirementaccount_grpc_pb]
