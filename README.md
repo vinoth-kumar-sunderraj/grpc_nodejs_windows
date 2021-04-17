@@ -7,18 +7,16 @@
 4. install grpc_tools in global --npm install -g grpc-tools
 ```
 
-## Download PROTC Compiler for windows from
-https://github.com/protocolbuffers/protobuf/releases
-
-## Install it in the folder 
+## Download latest [PROTC Compiler] (https://github.com/protocolbuffers/protobuf/releases) for windows 
 ```
+Install it in the folder 
 C:/Apps/protoc-3.15.6-win64/bin/protoc 
 ```
-[Execute the below command to generate the static grpc files]
+__Execute the below command to generate the static grpc files__
 Verified working Command - 16/04/2021
-[Execute below command generate schema file named retirementaccount_grpc_pb]
+__Execute below command generate schema file named retirementaccount_grpc_pb__
 C:/Apps/protoc-3.15.6-win64/bin/protoc --js_out=import_style=commonjs,binary:src/static/build/ proto/retirementaccount.proto
-[Execute below command generate service object retirementaccount_pb reference the schema file generated in previous step]
+__Execute below command generate service object retirementaccount_pb reference the schema file generated in previous step__
 grpc_tools_node_protoc --js_out=import_style=commonjs,binary:src/static/build/proto --grpc_out=grpc_js:src/static/build/proto  --proto_path=./proto ./proto/*.proto
 ## Static code
 ### Run the below commands in a terminal [Execute the static server]
@@ -41,6 +39,7 @@ npm run dynamicclient
 
 ## Refer the site for sample implementation
 https://dev.to/joker666/the-complete-microservice-tutorial-part-1-building-user-service-with-grpc-node-js-and-mongodb-2abp
+sample commands
 grpc_tools_node_protoc \
     --js_out=import_style=commonjs,binary:userService/proto/ \
     --grpc_out=grpc_js:userService/proto \
