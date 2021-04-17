@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package retirementAccount;
+
+
+service RetirementAccount {
+    
+    rpc RetrievePolicy (PolicyReq) returns (PolicyDetail) {};
+    rpc GetCurrentFunds (PolicyReq) returns (Funds) {};
+  }
+  
+  // The request message containing the policy number.
+  message PolicyReq {
+    int32 policy_number = 1;
+  }
+
+   // The request message containing the policy number.
+   message PolicyDetail {
+    int32 policy_number = 1;
+    string start_date = 2;
+    int32 retirement_age = 3;
+    string scheme_name = 4;
+    bool make_payment = 5;
+  }
+
+  message Funds{
+      repeated Fund funds = 1;
+  }
+
+  message Fund{
+    string code = 1;
+    string name = 2;
+    string fact_sheet = 3;
+    float percentage = 4;
+    double value_gbp = 5;
+    string valuation_date = 6;
+}
+
