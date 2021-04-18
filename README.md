@@ -1,4 +1,5 @@
 # grpc_nodejs_windows
+This project is a sample GRPC service built using NodeJS in windows. 
 ## Install NPM dependency
 ```
 1. npm i @grpc/grpc-js
@@ -39,11 +40,7 @@ npm run dynamicclient
 
 ## Refer the site for sample implementation
 https://dev.to/joker666/the-complete-microservice-tutorial-part-1-building-user-service-with-grpc-node-js-and-mongodb-2abp
-sample commands
-grpc_tools_node_protoc \
-    --js_out=import_style=commonjs,binary:userService/proto/ \
-    --grpc_out=grpc_js:userService/proto \
-    --proto_path=./protos/user ./protos/user/*.proto
+
 
 ## Interesting read the express js with grpc integration
     https://mherman.org/blog/node-grpc-postgres/
