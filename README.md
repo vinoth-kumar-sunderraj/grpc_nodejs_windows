@@ -18,21 +18,21 @@ Verified working Command - 16/04/2021
 grpc_tools_node_protoc --js_out=import_style=commonjs,binary:src/static/build/proto --grpc_out=grpc_js:src/static/build/proto  --proto_path=./proto ./proto/*.proto
 
 ```
-## Run Static GRPC ]service ##
-### Run the below commands in a terminal [Execute the static server]
+## Run Static GRPC service ##
+### Run the below commands in a terminal to start the static server
 ```
 npm run staticserver
 ```
-### open another terminal [Eecute below command to run static client]
+### open another terminal to execute static client
 ```
 npm run staticclient
 ```
 ## Run Dynamic GRPC service
-### Run the below commands in a terminal [Execute the dynamic server]
+### Run the below commands in a terminal to start the dynamic server
 ```
 npm run dynamicserver
 ```
-### Open another terminal [Execute below command to run dynamic client]
+### Open another terminal to execute dynamic client
 ```
 npm run dynamicclient
 ```
