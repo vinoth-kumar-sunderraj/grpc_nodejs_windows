@@ -1,5 +1,5 @@
 # grpc_nodejs_windows
-This project is a sample GRPC service built using NodeJS in windows. 
+This project is a sample GRPC service, built using NodeJS in windows. 
 GRPC services can be built using two ways and this project implements service in both ways.
 1. Static - Static generation, using grpc-tools and thus protoc, plus grpc at runtime.
 2. Dynamic - Dynamic generation, using @grpc/proto-loader and thus protobufjs, plus grpc at runtime.
@@ -10,22 +10,13 @@ GRPC services can be built using two ways and this project implements service in
 2. npm i @grpc/proto-loader
 3. npm i google-protobuf
 4. install grpc_tools in global --npm install -g grpc-tools
-```
 
-## Download latest [PROTC Compiler](https://github.com/protocolbuffers/protobuf/releases) for windows 
-```
-Install in the folder 
-C:/Apps/protoc-3.15.6-win64/bin/protoc 
-```
 ### Execute the below command to generate the static grpc files ### 
 Verified working Command - 16/04/2021
-### Execute below command generate schema file named retirementaccount_grpc_pb ### 
+### Execute below command generate schema & service file name ends with *_grpc_pb & *_pb ### 
 ```
-C:/Apps/protoc-3.15.6-win64/bin/protoc --js_out=import_style=commonjs,binary:src/static/build/ proto/retirementaccount.proto
-```
-### Execute below command generate service object retirementaccount_pb reference the schema file generated in previous step ### 
-```
-grpc_tools_node_protoc --js_out=import_style=commonjs,binary:src/static/build/proto --grpc_out=grpc_js:src/static/build/proto  --proto_path=./proto ./proto/*.proto
+grpc_tools_node_protoc --proto_path=proto --js_out=import_style=commonjs,binary:src/static/build/proto ./proto/*.proto
+
 ```
 ## Run Static GRPC ]service ##
 ### Run the below commands in a terminal [Execute the static server]

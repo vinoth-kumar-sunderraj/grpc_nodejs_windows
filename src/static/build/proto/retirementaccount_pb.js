@@ -1,4 +1,4 @@
-// source: proto/retirementaccount.proto
+// source: retirementaccount.proto
 /**
  * @fileoverview
  * @enhanceable
