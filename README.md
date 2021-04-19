@@ -10,7 +10,7 @@ GRPC services can be built using two ways and this project implements service in
 2. npm i @grpc/proto-loader
 3. npm i google-protobuf
 4. install grpc_tools in global --npm install -g grpc-tools
-
+```
 ### Execute the below command to generate the static grpc files ### 
 Verified working Command - 16/04/2021
 ### Execute below command generate schema & service file name ends with *_grpc_pb & *_pb ### 
