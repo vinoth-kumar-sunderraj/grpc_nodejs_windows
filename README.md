@@ -15,7 +15,7 @@ GRPC services can be built using two ways and this project implements service in
 Verified working Command - 16/04/2021
 ### Execute below command generate schema & service file name ends with *_grpc_pb & *_pb ### 
 ```
-grpc_tools_node_protoc --proto_path=proto --js_out=import_style=commonjs,binary:src/static/build/proto ./proto/*.proto
+grpc_tools_node_protoc --js_out=import_style=commonjs,binary:src/static/build/proto --grpc_out=grpc_js:src/static/build/proto  --proto_path=./proto ./proto/*.proto
 
 ```
 ## Run Static GRPC ]service ##
