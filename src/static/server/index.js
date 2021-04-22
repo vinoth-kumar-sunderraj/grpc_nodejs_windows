@@ -3,16 +3,16 @@ const services = require("../build/proto/retirementaccount_grpc_pb");
 var grpc = require('@grpc/grpc-js');
 var fs = require ('fs');
 
-const vinoPolicy = new schema.PolicyDetail();
+const myPolicy = new schema.PolicyDetail();
 //console.log(vinoPolicy);
 //vinoPolicy.setPolicyNumber(234324);
-vinoPolicy.setPolicyNumber(234324);
-vinoPolicy.setStartDate("22-01-2010");
-vinoPolicy.setRetirementAge(62);
-vinoPolicy.setSchemeName("Retirement Account");
-vinoPolicy.setMakePayment(true);
+myPolicy.setPolicyNumber(234324);
+myPolicy.setStartDate("22-01-2010");
+myPolicy.setRetirementAge(62);
+myPolicy.setSchemeName("Retirement Account");
+myPolicy.setMakePayment(true);
 
-console.log("Policy Name is: "+vinoPolicy.getSchemeName());
+console.log("Policy Name is: "+myPolicy.getSchemeName());
 
 const xFund = new schema.Fund();
 xFund.setCode("XX");
@@ -51,6 +51,12 @@ console.log("Binary data: "+fundBytes);
 //write funds binary in a file
 //binary format utilize less space, a good candidate to store in DB
 fs.writeFileSync("./output/binaryfunds", fundBytes);
+
+//now read the file and reconstruct the object
+const data = fs.readFileSync('./output/binaryfunds', null);
+const funds2 = new schema.Funds.deserializeBinary(data);
+console.log("Data from file "+ JSON.stringify(funds2));
+ 
 /**
  * Implements the RetrievePolicy RPC method.
  */
