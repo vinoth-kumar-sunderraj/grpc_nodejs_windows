@@ -63,7 +63,7 @@ console.log("Data from file "+ JSON.stringify(funds2));
  function retrievePolicyDetail(call, callback) {
     console.log("retrievePolicyDetail is invoked");
     console.log(call.request.getPolicyNumber());
-    callback(null, vinoPolicy);
+    callback(null, myPolicy);
   }
 
 /**

@@ -6,8 +6,8 @@
   "scripts": {
     "staticserver": "node ./src/static/server/index.js",
     "staticclient": "node ./src/static/client/index.js",
-    "dynamiserver": "node ./src/dynamic/server/index.js",
-    "dynamicclient": "node ./src/dynami/client/index.js"
+    "dynamicserver": "node ./src/dynamic/server/index.js",
+    "dynamicclient": "node ./src/dynamic/client/index.js"
   },
   "keywords": [],
   "author": "",
